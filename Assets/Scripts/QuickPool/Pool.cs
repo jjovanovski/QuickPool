@@ -26,6 +26,11 @@ namespace QuickPool {
 			return new ObjectPool<T>(poolableObject, objectsParent, initialCapacity, maxCapacity, resetAction);
 		}
 
+		public static ScriptPool<T> CreateScriptPool<T>(int initialCapacity, int maxCapacity = -1, Action<T> resetAction = null) where T : new() {
+			Init();
+			return new ScriptPool<T>(initialCapacity, maxCapacity, resetAction);
+		}
+
 	}
 
 }
