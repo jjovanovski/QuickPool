@@ -35,7 +35,7 @@ namespace QuickPool {
 				poolable = PooledObjects.Pop();
 				poolable.gameObject.SetActive(true);
 			} else {
-                QuickPool.Pool.Instantiate<T>(PoolableObject, ObjectsParent);
+                poolable = QuickPool.Pool.Instantiate<T>(PoolableObject, ObjectsParent);
 			}
 
 			if(ResetAction != null) {

@@ -11,7 +11,9 @@ public class Driver : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		pool = Pool.CreateObjectPool<Stub>(tmp, transform, 10, -1, (s) => { s.transform.position = Vector3.zero; });
+		pool = Pool.CreateObjectPool<Stub>(tmp, transform, 10, 15, (s) => 
+			{ s.transform.position = Vector3.zero; }
+		);
 	}
 	
 	// Update is called once per frame
